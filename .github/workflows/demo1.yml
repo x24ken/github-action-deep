@@ -1,5 +1,13 @@
 name: Events Demo 1
 on:
+  push:
+    branches:
+      - main
+      - feature/* # 例: feature/add-new-feature
+      - dev-* # 例: dev-add-new-feature
+    paths-ignore:
+      - ".github/**" # 例: .github/workflows/demo1.ymlを無視
+
   pull_request:
     types: opened
   workflow_dispatch:
